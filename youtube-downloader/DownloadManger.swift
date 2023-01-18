@@ -161,7 +161,6 @@ class DownloadManger: NSObject, ObservableObject,URLSessionDownloadDelegate, UID
     
     func getVideoFileAsset() -> AVPlayerItem? {
         let docsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
-        let destinationURL = directoryPath.appendingPathComponent(url.lastPathComponent)
 
         let destinationUrl = docsUrl?.appendingPathComponent("myVideo.mp4")
         if let destinationUrl = destinationUrl {
